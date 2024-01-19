@@ -4,18 +4,25 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Text("HEllo"),
+    return MaterialApp(
+      home: const Scaffold(
+        backgroundColor: Colors.green,
+        body: Center(
+          child: Text(
+            'Nurasyl',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 36.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
